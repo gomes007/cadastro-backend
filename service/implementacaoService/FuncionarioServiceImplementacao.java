@@ -123,7 +123,7 @@ public class FuncionarioServiceImplementacao implements FuncionarioService {
 	@Override
 	public Funcionario fromDTO(FuncionarioDTO objDTO) {
 
-		return new Funcionario(objDTO.getId(), objDTO.getNome(), objDTO.getEmail(), null, null, null, null, null, null, false);
+		return new Funcionario(objDTO.getId(), objDTO.getNome(), objDTO.getEmail(), null, null, null, null, null, null, false, null);
 	}
 	
 	
@@ -133,7 +133,7 @@ public class FuncionarioServiceImplementacao implements FuncionarioService {
 	public Funcionario fromDTO(FuncionarioNewDTO objDTO) {
 
 		Funcionario func = new Funcionario(null, objDTO.getNome(), objDTO.getEmail(), objDTO.getCpf(), objDTO.getTelefone(),
-				objDTO.getDataNascimento(), objDTO.getEstadoCivil(), objDTO.getSexo(), objDTO.getCoding(), objDTO.getPodeViajar());						
+				objDTO.getDataNascimento(), objDTO.getEstadoCivil(), objDTO.getSexo(), objDTO.getCoding(), objDTO.getPodeViajar(), objDTO.getOutrasInfo());						
 		
 		
 		Estado uf = new Estado(objDTO.getEstadoId(), objDTO.getUf(), null);

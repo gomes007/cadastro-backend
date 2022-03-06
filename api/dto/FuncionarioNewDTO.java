@@ -13,7 +13,7 @@ public class FuncionarioNewDTO implements Serializable {
 	private String cpf;
 	private String telefone;
 	private Date dataNascimento;
-	private String estadoCivil; //radio button
+	private String [] estadoCivil; //dropdownlist
 	private String sexo; //radio button
 	private String [] coding; //check box
 	private boolean podeViajar; //switch
@@ -23,6 +23,8 @@ public class FuncionarioNewDTO implements Serializable {
 	private String complemento;
 	private String bairro;
 	private String cep;
+	
+	private String outrasInfo;
 	
 	private Long cidadeId;
 	
@@ -91,13 +93,7 @@ public class FuncionarioNewDTO implements Serializable {
 		this.dataNascimento = dataNascimento;
 	}
 
-	public String getEstadoCivil() {
-		return estadoCivil;
-	}
 
-	public void setEstadoCivil(String estadoCivil) {
-		this.estadoCivil = estadoCivil;
-	}
 
 	public String getSexo() {
 		return sexo;
@@ -167,15 +163,7 @@ public class FuncionarioNewDTO implements Serializable {
 		this.podeViajar = podeViajar;
 	}
 
-	public String [] getCoding() {
-		 
-		return coding;
-	}
 
-	public void setCoding(String [] coding) {
-		
-		this.coding = coding;
-	}
 
 
 
@@ -211,6 +199,41 @@ public class FuncionarioNewDTO implements Serializable {
 
 	public void setUf(String uf) {
 		this.uf = uf;
+	}
+
+
+
+	public String getOutrasInfo() {
+		return outrasInfo;
+	}
+
+
+
+	public void setOutrasInfo(String outrasInfo) {
+		this.outrasInfo = outrasInfo;
+	}
+
+
+	public String [] getCoding() {
+		 
+		return coding;
+	}
+
+	public void setCoding(String [] coding) {
+		
+		this.coding = coding;
+	}
+	
+	
+
+	public String [] getEstadoCivil() {
+		return estadoCivil;
+	}
+
+
+
+	public void setEstadoCivil(String [] estadoCivil) {
+		this.estadoCivil = estadoCivil;
 	}
 
 
